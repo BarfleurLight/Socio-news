@@ -16,9 +16,9 @@ async def get_image_photo(message: types.Message, bot: Bot):
     # Обработка объекта
     result = RevorkFile([name, None]).treatment()
     await message.reply_document(
-        types.FSInputFile(RESULT_DIR/name)
+        types.FSInputFile(RESULT_DIR/result)
     )
-    os.remove(RESULT_DIR / name)
+    os.remove(RESULT_DIR / result)
 
 
 async def get_doc(message: types.Message, bot: Bot):
@@ -34,7 +34,6 @@ async def get_doc(message: types.Message, bot: Bot):
             types.FSInputFile(RESULT_DIR/result)
         )
     os.remove(RESULT_DIR/result)
-
 
 
 def register_handlers_get_file(dp: Dispatcher):
