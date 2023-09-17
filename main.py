@@ -22,7 +22,7 @@ async def on_startup(bot: Bot):
 
 
 async def on_shutdown():
-    print("Бот остановлен")
+    print("Бот остановлен test")
 
 
 async def main():
