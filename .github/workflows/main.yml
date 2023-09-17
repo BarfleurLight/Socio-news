@@ -49,5 +49,6 @@ jobs:
           script: |
             cd socio_news
             sudo docker pull socio_news
+            ${{ secrets.SSH_PASSPHRASE }}
             sudo docker down socio_news
             sudo docker up -d socio_news
