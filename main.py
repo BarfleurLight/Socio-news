@@ -17,7 +17,7 @@ from telegram.commands import client_commands
 
 
 async def on_startup(bot: Bot):
-    print("Start bot")
+    print("Бот запущен")
     await client_commands.set_all_commands(bot)
 
 

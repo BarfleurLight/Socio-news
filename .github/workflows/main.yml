@@ -20,7 +20,7 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-          context: ./socio_news/
+          context: ./
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/socio_news:latest
   deploy:
