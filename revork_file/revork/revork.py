@@ -28,12 +28,6 @@ class RevorkFile:
             "jpg": self._image,
             "png": self._image,
             "zip": self._zip_7z,
-            # "7z": self._dont_supported,
-            # "txt": self._dont_supported,
-            # "doc": self._dont_supported,
-            # "docx": self._dont_supported,
-            # "xls": self._dont_supported,
-            # "xlsx": self._dont_supported,
         }
         return ls.get(ras, self._dont_supported)()
 
