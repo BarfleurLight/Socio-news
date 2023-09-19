@@ -6,4 +6,4 @@ services:
     image: mvobr/socio_news
     env_file: .env
     ports:
-      - 80:80
+      - 8051:80
