@@ -1,0 +1,9 @@
+version: '3'
+
+
+services:
+  bot:
+    image: mvobr/socio_news
+    env_file: .env
+    ports:
+      - 80:80
