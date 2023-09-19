@@ -17,6 +17,7 @@ from telegram.commands import client_commands
 
 
 async def on_startup(bot: Bot):
+    await bot.send_message(441314955, text='Бот вышел в онлайн')
     await client_commands.set_all_commands(bot)
 
 
