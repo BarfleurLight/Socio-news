@@ -14,7 +14,7 @@ async def get_image_photo(message: types.Message, bot: Bot):
     name = Counter().get_name()
     await bot.download_file(image.file_path, START_DIR/name)
     # Обработка объекта
-    result = RevorkFile([name, None]).treatment()
+    result = RevorkFile([name, name]).treatment()
     await message.reply_document(
         types.FSInputFile(RESULT_DIR/result)
     )
