@@ -26,7 +26,10 @@ class RevorkFile:
         ls = {
             "pdf": self._pdf,
             "jpg": self._image,
+            "jpeg": self._image,
+            "JPG": self._image,
             "png": self._image,
+            "PNG": self._image,
             "zip": self._zip_7z,
         }
         return ls.get(ras, self._dont_supported)()
