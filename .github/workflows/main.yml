@@ -36,7 +36,6 @@ jobs:
           host: ${{ secrets.PROXY_HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          # passphrase: ${{ secrets.SSH_PASSPHRASE }}
           proxy_host: ${{ secrets.HOST }}
           proxy_username: ${{ secrets.USER }}
           proxy_key: ${{ secrets.SSH_KEY }}
@@ -48,9 +47,11 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          # passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          proxy_host: ${{ secrets.HOST }}
+          proxy_username: ${{ secrets.USER }}
+          proxy_key: ${{ secrets.SSH_KEY }}
           script: |
             cd socio_news
-            # sudo docker compose pull
-            # sudo docker compose down
-            # sudo docker compose up -d
+            sudo docker compose pull
+            sudo docker compose down
+            sudo docker compose up -d
