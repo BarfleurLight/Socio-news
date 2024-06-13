@@ -37,9 +37,9 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           # passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          proxy_host: ${{ secrets.PROXY_HOST }}
-          proxy_username: ${{ secrets.USER }}
-          proxy_key: ${{ secrets.SSH_KEY }}
+          # proxy_host: ${{ secrets.PROXY_HOST }}
+          # proxy_username: ${{ secrets.USER }}
+          # proxy_key: ${{ secrets.SSH_KEY }}
           source: "docker-compose.yml"
           target: "socio_news"
       - name: Executing remote ssh commands to deploy
